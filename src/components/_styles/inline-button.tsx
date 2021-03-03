@@ -9,6 +9,7 @@ const  Container = styled.button`
      cursor: pointer;
      display: inline-block;
      padding-bottom: 2px; 
+    
      border: none; 
      border-bottom: 1px solid currentColor;
      transition: all .2s; 
@@ -19,23 +20,6 @@ const  Container = styled.button`
 
      &:focus {
          animation: pulsate 1s infinite;
-     }
-
-     @keyframes pulsate {
-         0% {
-             transform: scale(1);
-             box-shadow: none; 
-         }
-
-         50% {
-             transform: scale(1.05);
-             box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
-         }
-
-         100% {
-             transform: scale(1);
-             box-shadow: none; 
-         }
      }
 
 `

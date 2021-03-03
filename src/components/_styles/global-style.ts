@@ -78,24 +78,29 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
   }
-   
 
-   .u-center-text {
-     text-align: center !important;
-   }
+  h2 {
+        font-size:  1.75rem;
+        font-weight: 400;
+        text-transform: uppercase;
+  }
 
-    .u-margin-bottom-big {
-      margin-bottom: 8rem !important;
-    }
+  @keyframes pulsate {
+         0% {
+             transform: scale(1);
+             box-shadow: none; 
+         }
 
-    .u-margin-bottom-medium {
-        margin-bottom: 4rem !important;
-    }
+         50% {
+             transform: scale(1.05);
+             box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+         }
 
-    .u-margin-bottom-small{
-        margin-bottom: 1.5rem !important;
-    }
-
+         100% {
+             transform: scale(1);
+             box-shadow: none; 
+         }
+     }
 
 `
 
