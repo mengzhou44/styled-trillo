@@ -71,14 +71,14 @@ const GlobalStyle = createGlobalStyle`
      min-height: 100vh;
   }
 
-  h3 {
-      font-size: 2rem; 
+  h1 {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
   }
    
-  .paragraph {
-     
-   }
- 
 
    .u-center-text {
      text-align: center !important;
