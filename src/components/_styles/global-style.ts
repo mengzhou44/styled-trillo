@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
  
-import { DeviceType, respond} from './media'
+import { BreakPoint,  respond} from './media'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
         --line: 1px solid var(--grey-light-2);
    }
 
+
   *,
   *::before,
   *::after
@@ -43,21 +44,9 @@ const GlobalStyle = createGlobalStyle`
         box-sizing:  border-box; 
         font-size: 62.5%;
 
-        ${respond(DeviceType.largeTablet, `
-            font-size: 56.25%;
-        `)}
-
-        ${respond(DeviceType.smallTablet, `
-            font-size: 50%;
-        `)}
-
-         ${respond(DeviceType.phone, `
-            font-size: 30%;
-        `)}
-
-         ${respond(DeviceType.largeDesktop, `
-            font-size: 75%;
-        `)}
+        ${respond(BreakPoint.large, `
+           font-size: 50%; 
+       `)}
   }
 
   body {

@@ -1,27 +1,20 @@
-export enum DeviceType {
-    phone,
-    smallTablet,
-    largeTablet,
-    desktop,
-    largeDesktop
+export enum BreakPoint {
+    largest,
+    large,
+
 }
 
-export const respond  =  (device:DeviceType, content: string) => {
+export const respond  =  (breakPoint:BreakPoint, content: string) => {
 
+  switch(breakPoint) {
 
-  switch(device) {
-      case   DeviceType.phone: 
-            return  `@media only screen and (max-width: 600px ) { ${content} }`
-       
-      case   DeviceType.smallTablet:  
-          return  `@media only screen and (max-width: 900px ) { ${content} }`
-        
-
-      case   DeviceType.largeTablet:  
-          return  `@media only screen and (max-width: 1200px ) { ${content} }`
+      case  BreakPoint.largest:  
+          return  `@media only screen and (max-width: 75rem ) { ${content} }`
+      case  BreakPoint.large:  
+          return  `@media only screen and (max-width: 68.75rem ) { ${content} }`
        
       default:  
-          return  `@media only screen and (min-width: 1800px ) { ${content} }`
+          return   ``
      
   }
 }
