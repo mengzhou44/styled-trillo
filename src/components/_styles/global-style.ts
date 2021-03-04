@@ -1,8 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
- 
-import { BreakPoint,  respond} from './media'
-
+import { BreakPoint, respond } from "./media";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -42,11 +40,14 @@ const GlobalStyle = createGlobalStyle`
 
   html {
         box-sizing:  border-box; 
-        font-size: 62.5%;
+              font-size: 62.5%;
 
-        ${respond(BreakPoint.large, `
+        ${respond(
+          BreakPoint.large,
+          `
            font-size: 50%; 
-       `)}
+       `
+        )}
   }
 
   body {
@@ -66,6 +67,13 @@ const GlobalStyle = createGlobalStyle`
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        ${respond(
+          BreakPoint.large,
+          ` font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+          `
+        )}
   }
 
   h2 {
@@ -91,6 +99,6 @@ const GlobalStyle = createGlobalStyle`
          }
      }
 
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
